@@ -9,9 +9,13 @@ namespace Products {
 }
 
 namespace Orders {
+    interface Items extends Products.Item {
+        quantity: number;
+        total: number;
+    }
     export interface Order {
         id: number;
-        items: Products.Item[];
+        items: Items[];
         total: number;
     }
 }
