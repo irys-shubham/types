@@ -9,10 +9,7 @@ namespace Products {
 }
 
 namespace Orders {
-    interface Items extends Products.Item {
-        quantity: number;
-        total: number;
-    }
+    type Items = { quantity: number; total: number; } & Products.Item;
     export interface Order {
         id: number;
         items: Items[];
