@@ -7,3 +7,11 @@ namespace Products {
         image: string;
     }
 }
+
+namespace Orders {
+    export interface Order {
+        id: number;
+        items: Products.Item[];
+        total: number;
+    }
+}
